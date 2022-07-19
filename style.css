@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Arima:wght@100;600&family=Oswald&family=Poppins:wght@500&display=swap');
-.players{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 30px;
 
-}
 body{
     font-family: 'Arima', cursive;
 font-family: 'Oswald', sans-serif;
@@ -23,6 +18,13 @@ main{
     padding: 30px;
     margin-top: 21px;
     border-radius: 5px;
+
+}
+.players{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 30px;
+    justify-items: center;
 
 }
 hr{
@@ -81,3 +83,63 @@ height: 117px;
 /* -----------
 latest courses
 -------------- */
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2em;
+    margin: 20px 0px;
+}
+.course-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course .course-banner img{
+    width: 224px;
+    height: 104px;
+}
+.fa-star{
+    font-size: 12px;
+}
+.fa-star.filled{
+    color: #ffc014;
+}
+.fa-star-half-stroke{
+    color: #ffc014;
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 422px) {
+    
+    .container{
+        width: 100%;
+        justify-content: center;
+    }
+    .players{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blogs{
+       grid-template-columns: repeat(1, 1fr);
+       margin: 1em;
+    }
+    .blog{
+        flex-direction: column;
+    }
+    .thumbnail img{
+        width: 100%;
+        height: 25vh;
+    }
+    
+    .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .course .course-banner img {
+        width: 100%;
+        height: 28vh;
+    }
+    .course{
+        margin: 20px ;
+    }
+    
+}
